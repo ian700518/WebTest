@@ -1,0 +1,225 @@
+﻿/* 基本樣式設定 */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+/* 表單區域樣式 */
+.input-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* 表單行樣式，用於並排顯示元素 */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: flex-start; /* 確保元素頂部對齊 */
+}
+
+    .form-row .form-group {
+        flex: 1;
+        min-width: 200px; /* 確保每個元素有足夠的寬度 */
+    }
+
+/* 三欄式排列 */
+.three-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* 響應式設計：在小螢幕上改為單欄顯示 */
+@media (max-width: 768px) {
+    .three-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+}
+
+/* 表單元素樣式 */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+small {
+    display: block;
+    color: #777;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* 按鈕樣式 */
+button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+    button:hover {
+        background-color: #2980b9;
+    }
+
+    button:disabled {
+        background-color: #cccccc;
+        cursor: not-allowed;
+    }
+
+/* 顏色選擇器樣式 */
+.color-group {
+    flex: 1;
+    min-width: 150px;
+}
+
+.color-input-container {
+    display: flex;
+    align-items: center;
+}
+
+input[type="color"] {
+    width: 50px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.color-preview {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+
+/* 輸出區域樣式 */
+.output-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 修改 combined-container 樣式 */
+#combined-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    border: none; /* 移除邊框 */
+    padding: 0; /* 移除內邊距 */
+    background-color: transparent; /* 改為透明背景 */
+}
+
+/* 新增一個用於顯示的容器，保持原有的視覺效果 */
+#display-container {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: white;
+    display: inline-block;
+}
+
+#qrcode {
+    display: inline-block;
+}
+
+/* 盲文覆蓋層樣式 */
+#braille-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+/* 尺寸資訊顯示樣式 */
+#size-info {
+    margin-bottom: 15px;
+    font-size: 14px;
+    text-align: left;
+}
+
+/* 盲文容量資訊顯示樣式 */
+#braille-capacity-info {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+}
+
+/* 下載按鈕樣式 */
+#download-btn {
+    margin-top: 10px;
+    background-color: #27ae60;
+}
+
+    #download-btn:hover {
+        background-color: #219653;
+    }
+
+    #download-btn:disabled {
+        background-color: #cccccc;
+        cursor: not-allowed;
+    }
+
+/* 盲文字元樣式 */
+.braille-char {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 1;
+    font-family: monospace;
+}
+
+/* 盲文行樣式 */
+.braille-line {
+    white-space: nowrap;
+    overflow: hidden;
+}
