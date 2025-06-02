@@ -428,7 +428,8 @@ function overlayBrailleOnQRCode(qrSize, moduleCount, pixelSize) {
             // 盲文第二行以上檢查: 新的一行如果從X軸等於0開始輸出會影響到QR Code的左下角定位點時, 需要持續右移X軸到不影響為止
             if (lineBottom >= leftBottomFinderStartY && startX < leftFinderEndX) {
                 // 如果行會干擾左下角定位點，則從左側定位點之後開始
-                startX = leftFinderEndX + minimumSafeMarginPx;
+                //startX = leftFinderEndX + minimumSafeMarginPx;
+                startX = brailleCharSpacingPx + frameSize + minimumSafeMarginPx;
             }
         }
 
